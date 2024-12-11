@@ -17,7 +17,7 @@ This repository contains the code for Assignment #3 for COMP 3512 at Mount Royal
 - [**/circuits/1**](https://stingy-stealth-fernleaf.glitch.me/circuits/1) - Details about a specific circuit
 - [**/constructors**](https://stingy-stealth-fernleaf.glitch.me/constructors) - Returns information about F1 constructors
 - [**/constructors/mclaren**](https://stingy-stealth-fernleaf.glitch.me/constructors/mclaren) - Details about the McLaren constructor
-- [**/conStRuctorS/mclaren**](https://stingy-stealth-fernleaf.glitch.me/conStrUctors/mclaren) - Typo, case sensitive (no data returned)
+- [**/conStRuctorS/mclaren**](https://stingy-stealth-fernleaf.glitch.me/conStrUctors/mclaren) - Details about the McLaren constructor
 - [**/constructors/javascript**](https://stingy-stealth-fernleaf.glitch.me/constructors/javascript) - Fictional URL (no data returned)
 - [**/constructorResults/mclaren/2023**](https://stingy-stealth-fernleaf.glitch.me/constructorResults/mclaren/2023) - Results for McLaren in 2023
 - [**/constructorResults/MERCEDES/2020**](https://stingy-stealth-fernleaf.glitch.me/constructorResults/MERCEDES/2020) - Results for Mercedes in 2020
