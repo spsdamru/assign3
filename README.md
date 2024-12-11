@@ -35,4 +35,4 @@ This repository contains the code for Assignment #3 for COMP 3512 at Mount Royal
 - [**/results/race/1100**](https://stingy-stealth-fernleaf.glitch.me/results/race/1100) - Results for a race with ID 1100
 - [**/results/race/1756348576**](https://stingy-stealth-fernleaf.glitch.me/results/race/1756348576) - Fictional URL (no data returned)
 - [**/results/season/2023**](https://stingy-stealth-fernleaf.glitch.me/results/season/2023) - Results for the 2023 season
-- [**/results/season/2034**](https://stingy-stealth-fernleaf.glitch.me/results/season/2034) - Placeholder for results for the 2034 season
+- [**/results/season/2034**](https://stingy-stealth-fernleaf.glitch.me/results/season/2034) - Fictional URL (no data returned)
