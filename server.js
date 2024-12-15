@@ -2,15 +2,12 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
-
 const app = express();
 app.use(cors());
-
 const loadRoutes = () => {
   const dataDir = path.join(__dirname, 'data');
   const routes = ['circuits', 'constructors', 'drivers', 'qualifying', 'races', 'results'];
   const apiRoutes = {};
-
   routes.forEach(routeName => {
     try {
       const filePath = path.join(dataDir, `${routeName}.json`);
@@ -48,19 +45,36 @@ const loadRoutes = () => {
         });
       }
       
+      if (routeName === 'races') {
+        jsonData.forEach(race => {
+            const raceID = race.id;
+            app.get(`/results/race/${raceID}`, (req, res) => {
+                res.json(race);
+            });
+        });
+      }
+      
+      if (routeName === 'results') {
+        app.get('/results/season/:year', (req, res) => {
+          const seasonYear = req.params.year;
+          const seasonResults = jsonData.filter(result => 
+            result.race.year === parseInt(seasonYear)
+          );
+            res.json(seasonResults);
+        });
+      }
+      
       apiRoutes[routeName] = `/${routeName}`;
     } catch (error) {
       console.error(`Error loading ${routeName}.json:`, error);
     }
   });
-
   return apiRoutes;
 };
 
 app.get('/', (req, res) => {
   res.send('F1 API is running. Available routes: /circuits, /constructors, /drivers, /qualifying, /races, /results');
 });
-
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
